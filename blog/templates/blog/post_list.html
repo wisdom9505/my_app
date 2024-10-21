@@ -1,0 +1,7 @@
+{% include 'navigation.html' %}
+<h1 style="color:Tomato;"> Blog Posts </h1>
+{% for post in posts %}
+    <p style="color: cornflowerblue; font-family: 'Karla', cursive; font-size: 50px; font-weight: bold;"><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></p>
+    <p>Created at: {{ post.created_at }}</p>
+    <br>
+{% endfor %}

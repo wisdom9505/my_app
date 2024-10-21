@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+env/
+venv/
+ENV/
+.env
+.venv/
+.idea/
+.vscode/
+*.sqlite3
+*.log
+.DS_Store
+
+# Django
+*.log
+*.pot
+*.pyc
+.DS_Store
+*.egg-info/
+.pytest_cache/
+
+# Sphinx
+docs/_build/

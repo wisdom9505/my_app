@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Solutions Inc.</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  {% include 'navigation.html' %}
+
+ 
+  <header class="jumbotron text-center">
+    <div class="container">
+      <h1 style="color: Tomato;">Wizzy Highrollers Technology Inc.</h1>
+      <br>
+      <p style="font-size: 24px;">Your Partner in Innovative IT Solutions</p>
+      <p>Empowering your business with cutting-edge technology and expert services.</p>
+    </div>
+  </header>
+
+
+  <section class="container text-center">
+    <img src="{% static 'img/company.jpg' %}" alt="Company Image" class="img-fluid">
+  </section>
+
+
+  <section class="container">
+    <h2 style="color: Tomato;">About Us</h2>
+    <p>Wizzy Highrollers Technology Inc. is a leading IT service provider specializing in delivering high-quality and customized technology solutions to businesses of all sizes. Our mission is to drive innovation and growth through our comprehensive range of IT services.</p>
+    <p>With a team of experienced professionals, we offer tailored solutions that meet the unique needs of our clients, ensuring they stay ahead in the ever-evolving digital landscape.</p>
+    <p>Partner with us for expert guidance, innovative solutions, and exceptional customer service.</p>
+    <p>#EmpowerYourBusiness</p>
+  </section>
+
+  
+  <section class="container">
+    <h2 style="color: Tomato;">Our Services</h2>
+    <p>At Wizzy Highrollers Technology Inc., we offer a wide range of IT services designed to help your business succeed:</p>
+    <ul>
+      <li><strong>Custom Software Development:</strong> Creating bespoke software solutions tailored to your business needs.</li>
+      <li><strong>Cloud Services:</strong> Providing secure and scalable cloud computing solutions for seamless business operations.</li>
+      <li><strong>IT Consulting:</strong> Offering expert advice and strategies to optimize your IT infrastructure.</li>
+      <li><strong>Cybersecurity:</strong> Implementing robust security measures to protect your business from cyber threats.</li>
+      <li><strong>Managed IT Services:</strong> Comprehensive IT support and management to ensure your systems run smoothly.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2024 Wizzy Highrollers Technology Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

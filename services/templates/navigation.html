@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Solutions</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #00796b;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    .card-body {
+      background-color: #ffffff;
+      padding: 15px;
+    }
+
+    .btn-primary {
+      background-color: #00796b;
+      border-color: #004d40;
+    }
+
+    .btn-primary:hover {
+      background-color: #004d40;
+      border-color: #00796b;
+    }
+
+    .btn-secondary {
+      background-color: #004d40;
+      border-color: #00796b;
+    }
+
+    .btn-secondary:hover {
+      background-color: #00796b;
+      border-color: #004d40;
+    }
+
+    .logout-form {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  {% include 'navigation.html' %}
+
+  <!-- Page Content -->
+  <header>
+    <h1 class="display-4 fw-bolder">Welcome to Wizzy Highrollers Technology Inc.</h1>
+    <p>Your trusted partner in IT services and solutions</p>
+
+    <!-- Sign-in/Sign-out Buttons -->
+    {% if user.is_authenticated %}
+      <form action="{% url 'logout' %}" method="post" class="logout-form">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-secondary">Log Out</button>
+      </form>
+    {% else %}
+      <a href="{% url 'login' %}" class="btn btn-secondary">Log In</a>
+    {% endif %}
+  </header>
+
+  <div class="container mt-5">
+    <!-- Service 1 -->
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">We create responsive and user-friendly websites to enhance your online presence.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Software Development</h5>
+            <p class="card-text">Custom software solutions tailored to meet your business needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="row mt-4">
+      <div class="col-md-6 col-lg-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">IT Consulting</h5>
+            <p class="card-text">Expert advice to help you navigate the complexities of IT and achieve your goals.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Service 4 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Cybersecurity</h5>
+            <p class="card-text">Protect your business from cyber threats with our comprehensive security solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

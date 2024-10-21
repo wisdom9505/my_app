@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Solutions</title>
+  <style>
+    .card-img-top {
+      object-fit: contain;
+      height: 200px;
+    }
+
+    .card-img-top:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  {% include 'navigation.html' %}
+
+
+  <header>
+    <div class="text-center text-dark">
+      <h1 class="display-4 fw-bolder">Welcome to Wizzy Highrollers Technology Inc.</h1>
+      <p>Your trusted partner in IT services and solutions</p>
+    </div>
+  </header>
+
+  <div class="container mt-5">
+ 
+    <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <div class="card mb-3">
+          <img src="{% static 'img/service1.jpg' %}" class="card-img-top img-fluid" alt="Service 1">
+          <div class="card-body">
+            <h5 class="card-title">Web Development</h5>
+            <p class="card-text">We create responsive and user-friendly websites to enhance your online presence.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="card mb-3">
+          <img src="{% static 'img/service2.jpg' %}" class="card-img-top img-fluid" alt="Service 2">
+          <div class="card-body">
+            <h5 class="card-title">Software Development</h5>
+            <p class="card-text">Custom software solutions tailored to meet your business needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row mt-4">
+      <div class="col-md-6 col-lg-6">
+        <div class="card mb-3">
+          <img src="{% static 'img/service3.jpg' %}" class="card-img-top img-fluid" alt="Service 3">
+          <div class="card-body">
+            <h5 class="card-title">IT Consulting</h5>
+            <p class="card-text">Expert advice to help you navigate the complexities of IT and achieve your goals.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-6">
+        <div class="card mb-3">
+          <img src="{% static 'img/service4.jpg' %}" class="card-img-top img-fluid" alt="Service 4">
+          <div class="card-body">
+            <h5 class="card-title">Cybersecurity</h5>
+            <p class="card-text">Protect your business from cyber threats with our comprehensive security solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+
+</body>
+</html>
